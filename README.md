@@ -1,4 +1,4 @@
-# Check Your YouTube Trending Potential - An Natural Language Processing App
+# Check Your YouTube Trending Potential - Natural Language Processing App
 1. YouTube maintains a list of the top trending videos on the platform. For some videos it is predictable to become trending like a new song from a popular interpreter, or a new movie trailer. For other videos, the trends can be surprising. In this project, we build an app that rates a new video title trending potential. To do this, first we explore trending videos in a period of six months, second we process YouTube titles with natural language algortihms and third we create a machine learning model. At the end we implement a Flask app, that rates a new video title on a trending scale.
 
 2. The following demo shows, how the app works:  
