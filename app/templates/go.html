@@ -1,0 +1,34 @@
+{% extends "master.html" %}
+{% block title %}Results{% endblock %}
+
+{% block result %}
+    <h3 class="text-center">AI estimated rating for your Youtube title:</h3>
+    <hr />
+    <h4 class="text-center"><i>{{query}}</i></h4>
+    <div class="col-4 mx-auto">
+        <ul class="list-group">
+            {% if classification_result == "bad" %}
+                <li class="list-group-item list-group-item-secondary text-center">superior</li>
+                <li class="list-group-item list-group-item-secondary text-center">promising</li>
+                <li class="list-group-item list-group-item-secondary text-center">ok</li>
+                <li class="list-group-item list-group-item-danger text-center">{{classification_result}}</li>
+            {% elif classification_result == "ok" %}
+                <li class="list-group-item list-group-item-secondary text-center">superior</li>
+                <li class="list-group-item list-group-item-secondary text-center">promising</li>
+                <li class="list-group-item list-group-item-warning text-center">{{classification_result}}</li>
+                <li class="list-group-item list-group-item-secondary text-center">bad</li>
+            {% elif classification_result == "promising" %}
+                <li class="list-group-item list-group-item-secondary text-center">superior</li>
+                <li class="list-group-item list-group-item-primary text-center">{{classification_result}}</li>
+                <li class="list-group-item list-group-item-secondary text-center">ok</li>
+                <li class="list-group-item list-group-item-secondary text-center">bad</li>
+            {% elif classification_result == "superior" %}
+                <li class="list-group-item list-group-item-success text-center">{{classification_result}}</li>
+                <li class="list-group-item list-group-item-secondary text-center">promising</li>
+                <li class="list-group-item list-group-item-secondary text-center">ok</li>
+                <li class="list-group-item list-group-item-secondary text-center">bad</li>
+            {% endif %}
+        </ul>
+    </div>
+<br />
+{% endblock %}
