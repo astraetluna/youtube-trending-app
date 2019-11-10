@@ -42,6 +42,7 @@
 - notebook
 |- USvideos.csv # six months of U.S. trending data from YouTube
 |- YouTubeTrends.ipynb  # Jupyter notebook
+|- YouTubeTrends.pdf # Write-up of the Juypter notebook
 
 - media
 |- trailer.gif #  App trailer
